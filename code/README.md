@@ -1,0 +1,1 @@
+For N2H code, the group decided to make a Discord bot in Python. Find mine here: [https://github.com/daniel-tomov/dinobot](https://github.com/daniel-tomov/dinobot).
