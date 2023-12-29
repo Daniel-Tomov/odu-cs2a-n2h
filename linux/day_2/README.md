@@ -13,3 +13,6 @@ Using arguments in a Bash script can be useful when using a command multiple tim
 ```
 # forloops.sh
 A demonstration of **for loops** in bash
+# autoexpect
+The `autoexpect` command can be related to a macro. It records keyboard inputs to the terminal and enters them when specific text shows on the screen.
+One example shown that day was committing changes to a [git](https://git-scm.com/) repository. Git requires a username and password when pushing changes to a repository. Entering the username and password can be time consuming. This is where `autoexpect` comes in. The username and password are recorded and saved into an `expect` script. This script functions as the macro which can be used later. 
