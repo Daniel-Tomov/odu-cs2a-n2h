@@ -28,11 +28,13 @@ pip2 install pycryptodome
 4. Download the [memory dump](https://drive.google.com/file/d/1Pm6xHgYBT3tV84QQy9m4Kvtrfjk4XV1B) for the challenge.
 
 # Challenges
+There is a resource on the Internet that explains how to solve the challenges. It is not a writeup, but someone explaining how to do the same steps below.
+
 # Challenge 1
 
 <details>
 <summary>What version of Windows is the image of?</summary>
-Win7SP0x86
+Win7SP1x86_23418
 </details>
 
 <details>
