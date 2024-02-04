@@ -458,4 +458,5 @@ ssh bandit20@bandit.labs.overthewire.org -p 2220
 
 This challenge requires two terminals. One to run the setuid binary and another to listen on a port and send the current password. 
 ![](bandit20.png)
+
 The password for `bandit21` is `NvEJF7oVjkddltPSrdKEFOllh9V1IBcq`.
