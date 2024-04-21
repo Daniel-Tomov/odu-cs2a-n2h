@@ -1,0 +1,237 @@
+
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Switch
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username cisco secret 5 $1$2AMV$H1N/mWGidPsZeQrLzlKV91
+!
+!
+aaa new-model
+!
+!
+aaa authentication login default local
+!
+!
+!
+aaa session-id common
+system mtu routing 1500
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1325315840
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1325315840
+ revocation-check none
+ rsakeypair TP-self-signed-1325315840
+!
+!
+crypto pki certificate chain TP-self-signed-1325315840
+ certificate self-signed 01
+  3082023F 308201A8 A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31333235 33313538 3430301E 170D3933 30333031 30303032 
+  30335A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 33323533 
+  31353834 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100D366 1653659A 5C26C4DC CE625F13 D0949B25 7E62B096 40007AFA 60BC9556 
+  7A6730C9 DCEC3C3C 533DC7CD 9C99C553 44ED8664 3271F0E6 40CBE36D 7D513C8E 
+  C1D6068D 4E632FED 06D073ED 6214CA2A 6E82B06C FE03C45D 49E0510C 1566655A 
+  E8ABE8E8 ED3D77A5 F29CD62B 07CF14C6 731D2362 862E661C 5A22901A 7D02C811 
+  377D0203 010001A3 67306530 0F060355 1D130101 FF040530 030101FF 30120603 
+  551D1104 0B300982 07537769 7463682E 301F0603 551D2304 18301680 14485296 
+  C4711D69 8E26E559 FAA0F568 9A673456 A1301D06 03551D0E 04160414 485296C4 
+  711D698E 26E559FA A0F5689A 673456A1 300D0609 2A864886 F70D0101 04050003 
+  8181006E 9E44AC91 FD0CD16A EF14D98E 25248560 C862A43B D8696F69 9DCBB2E0 
+  F064A427 77D1B42D 4F410F3C 5D5AAE58 AD34F0A5 3162C3C6 75D66500 D0ECBAA5 
+  CE27049C 84DE084D 8CD5F896 C4F9BB15 97EE0CB4 59C9D2FA 77BAD5A4 B65EB0CC 
+  CFF093E5 55A97102 724634BE 844CC1CC FA86629C 54FBC353 55671A14 B6521C2C B308D4
+  quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 2
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/24
+ switchport access vlan 3
+ switchport mode access
+!
+interface FastEthernet0/25
+!
+interface FastEthernet0/26
+!
+interface FastEthernet0/27
+!
+interface FastEthernet0/28
+!
+interface FastEthernet0/29
+!
+interface FastEthernet0/30
+!
+interface FastEthernet0/31
+!
+interface FastEthernet0/32
+!
+interface FastEthernet0/33
+!
+interface FastEthernet0/34
+!
+interface FastEthernet0/35
+!
+interface FastEthernet0/36
+!
+interface FastEthernet0/37
+!
+interface FastEthernet0/38
+!
+interface FastEthernet0/39
+!
+interface FastEthernet0/40
+!
+interface FastEthernet0/41
+!
+interface FastEthernet0/42
+!
+interface FastEthernet0/43
+!
+interface FastEthernet0/44
+!
+interface FastEthernet0/45
+ switchport mode trunk
+!
+interface FastEthernet0/46
+ switchport mode trunk
+!
+interface FastEthernet0/47
+!
+interface FastEthernet0/48
+!
+interface GigabitEthernet0/1
+ switchport access vlan 12
+ switchport mode access
+!
+interface GigabitEthernet0/2
+ switchport trunk native vlan 2
+ switchport mode trunk
+!
+interface Vlan1
+ ip address dhcp
+!
+interface Vlan2
+ ip address 192.168.99.250 255.255.255.0
+!
+ip default-gateway 192.168.99.1
+ip http server
+ip http authentication local
+no ip http secure-server
+!
+line con 0
+line vty 5 15
+!
+end
