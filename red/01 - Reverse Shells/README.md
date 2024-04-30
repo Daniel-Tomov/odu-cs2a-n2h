@@ -119,7 +119,7 @@ I tried using the `admin/password` credentials from earlier to login into the `f
 Running netstat shows there many processes with open ports running on the machine.
 ![](netstat.png?raw=true)
 - What is the IP address of the exploited machine? Is this address the same as the one you used to access the website? Why or why not? If not, what does this suggest?
-The IP of the exploited machine in this case is the `metasploitable2` Docker container. It will have a different IP address than the machine the Docker container is running on. In my case, the SEED VM has an IP address of `192.168.56.117`, but the metasploitable2 container's IP address is `172.16.10.2`. Docker IP addresses are usually in this format (`172.17.0.0/16` but the `docker-compse.yml` file specifies the `172.16.0.0/16` network). This indicates the DVWA application I attacked is running inside a Docker container.
+The IP of the exploited machine in this case is the `metasploitable2` Docker container. It will have a different IP address than the machine the Docker container is running on. In my case, the SEED VM has an IP address of `192.168.56.117`, but the metasploitable2 container's IP address is `172.16.10.2`. This indicates the DVWA application I attacked is running inside a Docker container.
 - What other programs are running? Do any of them jump out as privilege escalation vectors? i.e., if we exploit them for a shell, which user will be running that shell?
 The screenshot below contains the running processes in the metasploitable2 container. The `root` user has some processes. Maybe they can be exploited to gain further access.
 [](Running_Processes.png?raw=true)
